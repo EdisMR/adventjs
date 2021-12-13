@@ -9,6 +9,7 @@ Para saber si una carta es válida ✅, debes comprobar que los paréntesis cier
 */
 
 function isValid(letter){
+	/* .... Dificil de explicar pero funciona 😄 */
 	let result
 	let parentesis1Pos=letter.indexOf("(")+1
 	let parentesis2Pos=letter.indexOf(")")

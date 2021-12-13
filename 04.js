@@ -9,16 +9,18 @@ los árboles, por pequeños o grandes que sean, tienen un tronco de dos líneas 
 
 
 function createXmasTree(height){
-	let result=""
-	let maxCantAsteriscos
-	let cantAsteriscosPorLinea
-	let cantRellenoLateral
+	let result="",
+		maxCantAsteriscos,
+		cantAsteriscosPorLinea,
+		cantRellenoLateral
+
 	let caracteres={
 		space:"_",
 		aster:"*"
 	}
 
 	if(height>0 && height<=100){
+
 		maxCantAsteriscos=(height*2)-1
 		
 		/* Construir el arbol */

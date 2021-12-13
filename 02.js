@@ -16,7 +16,7 @@ function listGifts(carta){
 	let result={}
 	let temp=carta.toLowerCase().split(" ")
 
-	/* en el arrat Temp eliminamos los que tienen un "_" al inicio */
+	/* en el array Temp eliminamos los que tienen un "_" al inicio */
 	temp=temp.filter(item=>{
 		if(item.indexOf("_")!=0){
 			return item
@@ -25,8 +25,10 @@ function listGifts(carta){
 
 	/* Contar las veces que aparece cada uno y generar el objeto con los regalos contados */
 	let counter
-	for(let NN in temp){/* Recorremos el ararray para generar el objeto */
-		counter=0 /* En cada iteracion se reinica el contador */
+	
+	/* Recorremos el ararray para generar el objeto */
+	for(let NN in temp){
+		counter=0 /* En cada ciclo se reinicia el contador */
 		
 		for(let y in temp){
 			/* Recorremos para contar la cantidad de veces que aparece el objeto */
@@ -35,6 +37,10 @@ function listGifts(carta){
 			}
 		}
 		
+		/* 
+		Contador nos dice cuantas veces aparece cada item;
+		estamos dentro del for por lo que ahora guardamos en el objeto result el item y la cantidad de veces que aparece
+		*/
 		result[temp[NN]]=counter
 	}
 
